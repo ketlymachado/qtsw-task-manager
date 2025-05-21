@@ -54,7 +54,7 @@ Criar arquivo de configuração `src/tests/setup.test.db.ts`
 
 Criar pasta `src/tests/routes`
 
-Criar arquivo de teste `src/tests/services/task.routes.test.ts`
+Criar arquivo de teste `src/tests/routes/task.routes.test.ts`
 
 Criar teste de integração
 

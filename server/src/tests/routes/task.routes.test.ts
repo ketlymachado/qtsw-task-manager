@@ -11,6 +11,10 @@ jest.mock('../../middlewares/auth.middleware', () => ({
 
 import request from 'supertest';
 import app from '../../app';
+import { setupTestDB, disconnectTestDB } from '../setup.test.db';
+
+beforeEach(async () => await setupTestDB());
+afterAll(async () => await disconnectTestDB());
 
 // Define o conjunto de testes para o endpoint POST /api/tasks
 describe('POST /api/tasks', () => {

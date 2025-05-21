@@ -8,6 +8,8 @@
 
 Criar arquivo de configuração `jest.config.ts`
 
+> https://github.com/ketlymachado/qtsw-task-manager/blob/automated-tests/server/jest.config.ts
+
 Ajustar o `package.json`:
 
 ```JSON

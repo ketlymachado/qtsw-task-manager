@@ -99,6 +99,10 @@ Ajustar o `package.json`:
 
 Criar arquivo de teste `/src/pages/CreateTask/index.test.tsx`
 
+Criar testes unitários
+
+> https://github.com/ketlymachado/qtsw-task-manager/blob/automated-tests/client/src/pages/CreateTask/index.test.tsx
+
 `npm run test`
 
 ---

@@ -6,7 +6,19 @@
 
 `npm install --save-dev jest ts-jest @types/jest`
 
+Criar arquivo `.env.test`
+
+```ENV
+    DATABASE_URL="file:./dev-test.db"
+```
+
+Criar arquivo de configuração `jest.setup.ts`
+
+> https://github.com/ketlymachado/qtsw-task-manager/blob/automated-tests/server/jest.setup.ts
+
 Criar arquivo de configuração `jest.config.ts`
+
+> https://github.com/ketlymachado/qtsw-task-manager/blob/automated-tests/server/jest.config.ts
 
 Ajustar o `package.json`:
 
@@ -15,7 +27,9 @@ Ajustar o `package.json`:
         ...
         "test": "jest",
         "test:unit": "jest src/tests/services",
-        "test:integration": "jest src/tests/routes",
+        "migrate:test": "cross-env DATABASE_URL='file:./dev-test.db' prisma migrate reset --force --skip-seed --schema=../prisma/schema.prisma",
+        "run:jest": "jest src/tests/routes",
+        "test:integration": "npm-run-all migrate:test run:jest",
         "coverage": "jest --coverage"
     },
 ```
@@ -32,7 +46,11 @@ Criar testes unitários
 
 ## Testes de integração (backend)
 
-`npm install supertest @types/supertest --save-dev`
+`npm install npm-run-all cross-env supertest @types/supertest --save-dev`
+
+Criar arquivo de configuração `src/tests/setup.test.db.ts`
+
+> https://github.com/ketlymachado/qtsw-task-manager/blob/automated-tests/server/src/tests/setup.test.db.ts
 
 Criar pasta `src/tests/routes`
 

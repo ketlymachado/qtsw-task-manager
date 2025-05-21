@@ -88,6 +88,7 @@ Criar arquivo de teste `/src/pages/CreateTask/index.test.tsx`
 `npm run coverage`
 
 > [Back-end] Acessar file:///C:/.../qtsw-task-manager/server/coverage/lcov-report/index.html
+>
 > [Front-end] Acessar file:///C:/.../qtsw-task-manager/client/coverage/index.html
 
 ---

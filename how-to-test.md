@@ -90,10 +90,8 @@ Ajustar o `package.json`:
 ```JSON
     "scripts": {
         ...
-        "test": "jest",
-        "test:unit": "jest src/tests/services",
-        "test:integration": "jest src/tests/routes",
-        "coverage": "jest --coverage"
+        "test": "vitest",
+        "coverage": "vitest run --coverage"
     },
 ```
 

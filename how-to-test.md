@@ -54,7 +54,7 @@ Criar arquivo de configuração `src/tests/setup.test.db.ts`
 
 Criar pasta `src/tests/routes`
 
-Criar arquivo de teste `src/tests/services/task.routes.test.ts`
+Criar arquivo de teste `src/tests/routes/task.routes.test.ts`
 
 Criar teste de integração
 
@@ -90,14 +90,16 @@ Ajustar o `package.json`:
 ```JSON
     "scripts": {
         ...
-        "test": "jest",
-        "test:unit": "jest src/tests/services",
-        "test:integration": "jest src/tests/routes",
-        "coverage": "jest --coverage"
+        "test": "vitest",
+        "coverage": "vitest run --coverage"
     },
 ```
 
 Criar arquivo de teste `/src/pages/CreateTask/index.test.tsx`
+
+Criar testes unitários
+
+> https://github.com/ketlymachado/qtsw-task-manager/blob/automated-tests/client/src/pages/CreateTask/index.test.tsx
 
 `npm run test`
 
